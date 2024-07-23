@@ -7,6 +7,8 @@ import {mobile} from "../responsive"
 
 const Container = styled.div`
     height:60px;
+    overflow: hidden;
+    box-sizing: border-box;
     ${mobile({ height: "50px" })}
     
 
@@ -15,6 +17,7 @@ const Wrapper = styled.div`
     padding:10px 20px;
     display:flex;
     align-items:center;
+   box-sizing: border-box;
     justify-content:space-between;
     ${mobile({ padding: "10px 0px" })}
 
@@ -35,12 +38,14 @@ const Language = styled.span`
     align-items:center;
     margin-left:25px;
     padding:5px;
+    box-sizing: border-box;
     
  `;
 
 const StyledInput = styled.input`
     border:none;
-    ${mobile({ width: "50px" })}
+    box-sizing: border-box;
+    ${mobile({ width: "30px" })}
 `
 const Center = styled.div`
     flex:1;
@@ -48,7 +53,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
     font-weight:bold;
-    ${mobile({ fontsize: "24px" })}
+    ${mobile({ fontsize: "15px" })}
 `;
 const Right = styled.div`
     flex:1;
@@ -60,16 +65,17 @@ const Right = styled.div`
 const MenuItem = styled(Link)`
     font-size: 14px;
     cursor:pointer;
-    margin-left:25px;
+    margin-left:20px;
     color: black;
     text-decoration: none;
     &:hover {
     color: #31b9b9;
   };
-    ${mobile({ fontSize: "12px", marginleft: "10px" })}
+    ${mobile({ fontSize: "13px", marginleft: "10px" })}
 `;
 const CartMenuItem = styled.div`
-  margin-right: 25px;
+  margin-right: 20px;
+  ${mobile({ fontSize: "5px" })}
 `;
 
 const CartIcon = styled(ShoppingCartOutlined)`
@@ -78,9 +84,10 @@ const CartIcon = styled(ShoppingCartOutlined)`
 
 const CartBadge = styled(Badge)`
   .MuiBadge-badge {
-    right: -10px;
+    right: -6px;
     top: 13px;
     padding: 0 4px;
+    
   }
 `;
 
@@ -100,11 +107,11 @@ const Navbar = () => {
             <Right>
                 <MenuItem to="/register">REGISTER</MenuItem>
                 <MenuItem to="/login">SIGN IN</MenuItem>
-                <MenuItem to="/cart">
-                <Badge badgeContent={4} color="primary">
-                 <ShoppingCartOutlined />
-                </Badge>
-                </MenuItem>
+                <CartMenuItem to="/cart">
+                <CartBadge badgeContent={4} color="primary">
+                 <ShoppingCartOutlined style={{fontSize:27, marginLeft:5}} />
+                </CartBadge>
+                </CartMenuItem>
             </Right>
         </Wrapper>
        
