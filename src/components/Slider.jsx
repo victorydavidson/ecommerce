@@ -56,7 +56,7 @@ const ImgContainer = styled.div`
     height: 100%;
     flex: 1;
     ${mobile({ width: "40%"})}
-    ${tablet({ width: "40%" })}
+    ${tablet({ width: "50%" })}
     
 `;
 

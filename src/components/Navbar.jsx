@@ -45,7 +45,7 @@ const Language = styled.span`
 const StyledInput = styled.input`
     border:none;
     box-sizing: border-box;
-    ${mobile({ width: "30px" })}
+    ${mobile({ width: "52px" })}
 `
 const Center = styled.div`
     flex:1;
@@ -53,7 +53,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
     font-weight:bold;
-    ${mobile({ fontsize: "15px" })}
+    ${mobile({ fontsize: "20px" })}
 `;
 const Right = styled.div`
     flex:1;
