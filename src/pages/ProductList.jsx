@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Product from "./Product"
 import Announcement from "../components/Announcement";
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
 import {mobile} from "../responsive"
 
 const Container = styled.div`
@@ -77,8 +75,6 @@ const ProductList = () => {
         </Filter>
       </FilterContainer>
       <Product />
-      <Newsletter />
-      <Footer />
     </Container>
   );
 };

@@ -73,8 +73,13 @@ const MenuItem = styled(Link)`
   };
     ${mobile({ fontSize: "13px", marginleft: "10px" })}
 `;
-const CartMenuItem = styled.div`
+const CartMenuItem = styled(Link)`
   margin-right: 20px;
+  color:inherit;
+  text-decoration: none;
+  &:hover {
+    color: #31b9b9;
+  }
   ${mobile({ fontSize: "5px" })}
 `;
 
