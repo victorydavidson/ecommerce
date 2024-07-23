@@ -1,10 +1,11 @@
 import { EmailOutlined, Facebook, Instagram, PhoneOutlined, Pinterest, RoomOutlined, Twitter } from "@mui/icons-material";
 import styled from "styled-components";
-import {mobile} from "../responsive"
+import {mobile, tablet} from "../responsive"
 
 const Container = styled.div`
     display: flex;
     ${mobile({ FlexDirection: "column" })}
+    ${tablet({ FlexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -18,6 +19,8 @@ const Logo = styled.h1``;
 
 const Desc = styled.p`
     margin: 20px 0px;
+    ${mobile({ margin: "10px" })}
+    ${tablet({ margin: "10px" })}
 `;
 
 const SocialContainer = styled.div`
@@ -34,12 +37,15 @@ const SocialIcon = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    ${mobile({ width: "30px", height: "30px", marginRight: "5px" })}
+    ${tablet({ width: "30px", height: "30px", marginRight: "5px" })}
 `;
 
 const Center = styled.div`
      flex: 1;
      padding: 20px;
      ${mobile({ display: "none" })}
+     ${tablet({ display: "none" })}
 `;
  
 const Title = styled.h3`

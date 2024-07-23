@@ -35,6 +35,7 @@ const Language = styled.span`
     align-items:center;
     margin-left:25px;
     padding:5px;
+    
  `;
 
 const StyledInput = styled.input`
@@ -54,7 +55,7 @@ const Right = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    ${mobile({ flex:2, justifyContent: "center" })}
+    ${mobile({ flex:1, justifyContent: "center" })}
 `;
 const MenuItem = styled(Link)`
     font-size: 14px;
@@ -63,7 +64,7 @@ const MenuItem = styled(Link)`
     color: black;
     text-decoration: none;
     &:hover {
-    color: blue;
+    color: #31b9b9;
   };
     ${mobile({ fontSize: "12px", marginleft: "10px" })}
 `;

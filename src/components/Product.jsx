@@ -4,6 +4,7 @@ import {
     ShoppingCartOutlined
  } from '@mui/icons-material';
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom';
 
 const Info = styled.div`
     opacity: 0;
@@ -69,23 +70,33 @@ const Icon = styled.div`
         transform: scale(1.1);
     }
 `;
-const Product = ({item}) => {
+const Product = ({ item }) => {
+    const navigate = useNavigate();
+
+    const handleCartClick = () => {
+        navigate('/cart');
+    };
+
+    const handleProductClick = () => {
+        navigate('/product');
+    };
+
   return (
     <Container>
-       <Circle />
-       <Image src={item.img} />
-      <Info className="info">
-          <Icon>
-            <ShoppingCartOutlined />
-         </Icon>
-         <Icon>
-            <SearchOutlined />
-         </Icon>
-         <Icon>
-            <FavoriteBorderOutlined />
-         </Icon>
-      </Info>
-   </Container>
+            <Circle />
+            <Image src={item.img} />
+            <Info className="info">
+                <Icon onClick={handleCartClick}>
+                    <ShoppingCartOutlined />
+                </Icon>
+                <Icon onClick={handleProductClick}>
+                    <SearchOutlined />
+                </Icon>
+                <Icon>
+                    <FavoriteBorderOutlined />
+                </Icon>
+            </Info>
+        </Container>
   )
 }
 
